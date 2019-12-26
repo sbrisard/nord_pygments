@@ -1,7 +1,9 @@
 import functools
 
+from functools import lru_cache
 
-@lru_cache
+
+@lru_cache(None)
 def func(x, y):
     """This is a docstring"""
     if x < 0:
@@ -14,7 +16,7 @@ class A:
         self.x = x  # This is a useless comment
         self.y = y
 
-    def say_hello():
+    def say_hello(self):
         print(f"Hello, world\nx = {self.x}\ny = {self.y}")
 
 
