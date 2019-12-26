@@ -6,6 +6,8 @@
 [Arctic Ice Studio](https://www.arcticicestudio.com)
 <development@arcticicestudio.com>.
 
+![nord_pygments_example.png](nord_pygments_example.png)
+
 ## Installation
 
 Clone the repository
