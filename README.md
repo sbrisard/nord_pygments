@@ -1,4 +1,4 @@
-# pygments-nord
+# nord_pygments
 
 `Nord` highlighting style for `Pygments`
 
