@@ -1,72 +1,91 @@
-# -*- coding: utf-8 -*-
-"""
-    pygments.styles.emacs
-    ~~~~~~~~~~~~~~~~~~~~~
+"""Nord highlighting style for Pygments
 
-    A highlighting style for Pygments, inspired by Emacs.
+Nord is an arctic, north-bluish color palette by Arctic Ice Studio
+<development@arcticicestudio.com> (https://www.arcticicestudio.com)
 
-    :copyright: Copyright 2006-2019 by the Pygments team, see AUTHORS.
-    :license: BSD, see LICENSE for details.
+License: BSD-3 Clause License. See LICENSE for details
 """
 
 from pygments.style import Style
-from pygments.token import Keyword, Name, Comment, String, Error, \
-     Number, Operator, Generic, Whitespace
+from pygments.token import (
+    Keyword,
+    Name,
+    Comment,
+    String,
+    Error,
+    Number,
+    Operator,
+    Punctuation,
+    Generic,
+    Whitespace,
+)
 
-NORD_00 = "#2e3440"
-NORD_01 = "#3b4252"
-NORD_02 = "#434c5e"
-NORD_03 = "#4c566a"
+nord0 = "#2e3440"
+nord1 = "#3b4252"
+nord2 = "#434c5e"
+nord3 = "#4c566a"
+nord3_bright = "#616e87"
+
+nord4 = "#d8dee9"
+nord5 = "#e5e9f0"
+nord6 = "#eceff4"
+
+nord7 = "#8fbcbb"
+nord8 = "#88c0d0"
+nord9 = "#81a1c1"
+nord10 = "#5e81ac"
+
+nord11 = "#bf616a"
+nord12 = "#d08770"
+nord13 = "#ebcb8b"
+nord14 = "#a3be8c"
+nord15 = "#b48ead"
+
 
 class NordStyle(Style):
-    background_color = "#f8f8f8"
-    default_style = ""
+    background_color = nord0
+    default = nord4
 
     styles = {
-        Whitespace:                "#bbbbbb",
-        Comment:                   "italic #008800",
-        Comment.Preproc:           "noitalic",
-        Comment.Special:           "noitalic bold",
-
-        Keyword:                   "bold #AA22FF",
-        Keyword.Pseudo:            "nobold",
-        Keyword.Type:              "bold #00BB00",
-
-        Operator:                  "#666666",
-        Operator.Word:             "bold #AA22FF",
-
-        Name.Builtin:              "#AA22FF",
-        Name.Function:             "#00A000",
-        Name.Class:                "#0000FF",
-        Name.Namespace:            "bold #0000FF",
-        Name.Exception:            "bold #D2413A",
-        Name.Variable:             "#B8860B",
-        Name.Constant:             "#880000",
-        Name.Label:                "#A0A000",
-        Name.Entity:               "bold #999999",
-        Name.Attribute:            "#BB4444",
-        Name.Tag:                  "bold #008000",
-        Name.Decorator:            "#AA22FF",
-
-        String:                    "#FF0000",
-        String.Doc:                "italic",
-        String.Interpol:           "bold #BB6688",
-        String.Escape:             "bold #BB6622",
-        String.Regex:              "#BB6688",
-        String.Symbol:             "#B8860B",
-        String.Other:              "#008000",
-        Number:                    "#666666",
-
-        Generic.Heading:           "bold #000080",
-        Generic.Subheading:        "bold #800080",
-        Generic.Deleted:           "#A00000",
-        Generic.Inserted:          "#00A000",
-        Generic.Error:             "#FF0000",
-        Generic.Emph:              "italic",
-        Generic.Strong:            "bold",
-        Generic.Prompt:            "bold #000080",
-        Generic.Output:            "#888",
-        Generic.Traceback:         "#04D",
-
-        Error:                     "border:#FF0000"
+        Whitespace: nord4,
+        Comment: f"italic {nord3_bright}",
+        Comment.Preproc: nord10,
+        Keyword: f"bold {nord9}",
+        Keyword.Pseudo: f"nobold {nord9}",
+        Keyword.Type: f"nobold {nord9}",
+        Operator: nord9,
+        Operator.Word: f"bold {nord9}",
+        Name: nord4,
+        Name.Builtin: nord9,
+        Name.Function: nord8,
+        Name.Class: nord7,
+        Name.Namespace: nord7,
+        Name.Exception: nord11,
+        Name.Variable: nord4,
+        Name.Constant: nord7,
+        Name.Label: nord7,
+        Name.Entity: nord12,
+        Name.Attribute: nord7,
+        Name.Tag: nord9,
+        Name.Decorator: nord12,
+        Punctuation: nord6,
+        String: nord14,
+        String.Doc: nord3_bright,
+        String.Interpol: nord14,
+        String.Escape: nord13,
+        String.Regex: nord13,
+        String.Symbol: nord14,
+        String.Other: nord14,
+        Number: nord15,
+        Generic.Heading: f"bold {nord8}",
+        Generic.Subheading: f"bold {nord8}",
+        Generic.Deleted: nord11,
+        Generic.Inserted: nord14,
+        Generic.Error: nord11,
+        Generic.Emph: "italic",
+        Generic.Strong: "bold",
+        Generic.Prompt: f"bold {nord3}",
+        Generic.Output: nord4,
+        Generic.Traceback: nord11,
+        Error: nord11,
     }
